@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>রোমান্টিক গল্প</title>
+  <title>১৮+ গল্প</title>
   <style>
     body {
       font-family: 'Siyam Rupali', sans-serif;
@@ -142,7 +142,7 @@
 </head>
 <body>
 
-  <h1>রোমান্টিক গল্প</h1>
+  <h1>১৮+ গল্প</h1>
   <p class="subtitle">ভালোবাসার অনুভূতি নিয়ে সাজানো ৫টি ছোট্ট হৃদয়স্পর্শী গল্প। নিচের "আরও গল্প পড়ুন" বাটনে ক্লিক করলে তুমি আরো অনেক গল্প পাবে।</p>
 
   <!-- Top Banner Ad (Adsterra) -->
@@ -164,8 +164,9 @@
     <div class="story-title">ভালবাসার শুরু</div>
     <div class="story-summary">কলেজের প্রথম দিনেই দেখা, তখন থেকে উঠে আসা প্রত্যাশার গল্প।</div>
     <div class="story-content">রাহুল আর মেহজাবিনের দেখা হয়েছিল লাইব্রেরির কোণে, যখন বইয়ের মধ্যে লুকানো এক অজানা হাসি তাদের কাছে পাখির মতো ভেসে এলো...<br>তাদের বন্ধুত্ব খুব দ্রুত জমে উঠলো, ক্লাসের পর একসাথে ক্যান্টিনে যাওয়া, لাইব্রেরিতে পাশাপাশি বসে পড়া যেন এক স্বপ্নের মতো ছিল।<br>একদিন হঠাৎ করে বৃষ্টিতে ভিজে যাওয়ার পর রাহুল প্রথমবার হাত ধরেছিল...<br>সেই মুহূর্তে দুজনের চোখে যা ছিল, তা হাজার শব্দেও বলা যায় না...<br>তাদের কাহিনী শুধুই কলেজ জীবনে আটকে থাকেনি, বরং সময়ের সাথে সাথে আরও গভীর হতে থাকে...<br>তারা একসাথে ভবিষ্যতের স্বপ্ন বুনতে থাকে।<br>তবে ভালোবাসার পথ কি সবসময় মসৃণ হয়?<br>চলতে চলতে আসে কিছু দূরত্ব... ভুল বোঝাবুঝি...<br>কিন্তু সেসব পেরিয়ে আবার ফিরে আসা...<br>এটাই ছিল তাদের ভালোবাসার আসল গল্প।</div>
-    <div class="btn-readmore">আরও পড়ুন</div>
-    <div class="ad-container">
+    <div class="btn-readmore" onclick="toggleStory(this)">আরো পড়ুন</div>
+  
+  <div class="ad-container">
       <a href="https://your-affiliate-link.com" target="_blank">
         <img src="https://via.placeholder.com/700x100?text=Romantic+Gift+Banner" class="ad-banner" alt="Romantic Gift Ad">
       </a>
@@ -190,7 +191,8 @@
     <div class="story-title">ভালবাসার শুরু</div>
     <div class="story-summary">কলেজের প্রথম দিনেই দেখা, তখন থেকে উঠে আসা প্রত্যাশার গল্প।</div>
     <div class="story-content">রাহুল আর মেহজাবিনের দেখা হয়েছিল লাইব্রেরির কোণে, যখন বইয়ের মধ্যে লুকানো এক অজানা হাসি তাদের কাছে পাখির মতো ভেসে এলো...<br>তাদের বন্ধুত্ব খুব দ্রুত জমে উঠলো, ক্লাসের পর একসাথে ক্যান্টিনে যাওয়া, লাইব্রেরিতে পাশাপাশি বসে পড়া যেন এক স্বপ্নের মতো ছিল।<br>একদিন হঠাৎ করে বৃষ্টিতে ভিজে যাওয়ার পর রাহুল প্রথমবার হাত ধরেছিল...<br>সেই মুহূর্তে দুজনের চোখে যা ছিল, তা হাজার শব্দেও বলা যায় না...<br>তাদের কাহিনী শুধুই কলেজ জীবনে আটকে থাকেনি, বরং সময়ের সাথে সাথে আরও গভীর হতে থাকে...<br>তারা একসাথে ভবিষ্যতের স্বপ্ন বুনতে থাকে।<br>তবে ভালোবাসার পথ কি সবসময় মসৃণ হয়?<br>চলতে চলতে আসে কিছু দূরত্ব... ভুল বোঝাবুঝি...<br>কিন্তু সেসব পেরিয়ে আবার ফিরে আসা...<br>এটাই ছিল তাদের ভালোবাসার আসল গল্প।</div>
-    <div class="btn-readmore">আরও পড়ুন</div>
+    <div class="btn-readmore" onclick="toggleStory(this)">আরো পড়ুন</div> 
+    
     <div class="ad-container">
       <a href="https://your-affiliate-link.com" target="_blank">
         <img src="https://via.placeholder.com/700x100?text=Romantic+Gift+Banner" class="ad-banner" alt="Romantic Gift Ad">
@@ -215,7 +217,8 @@
     <div class="story-title">ভালবাসার শুরু</div>
     <div class="story-summary">কলেজের প্রথম দিনেই দেখা, তখন থেকে উঠে আসা প্রত্যাশার গল্প।</div>
     <div class="story-content">রাহুল আর মেহজাবিনের দেখা হয়েছিল লাইব্রেরির কোণে, যখন বইয়ের মধ্যে লুকানো এক অজানা হাসি তাদের কাছে পাখির মতো ভেসে এলো...<br>তাদের বন্ধুত্ব খুব দ্রুত জমে উঠলো, ক্লাসের পর একসাথে ক্যান্টিনে যাওয়া, লাইব্রেরিতে পাশাপাশি বসে পড়া যেন এক স্বপ্নের মতো ছিল।<br>একদিন হঠাৎ করে বৃষ্টিতে ভিজে যাওয়ার পর রাহুল প্রথমবার হাত ধরেছিল...<br>সেই মুহূর্তে দুজনের চোখে যা ছিল, তা হাজার শব্দেও বলা যায় না...<br>তাদের কাহিনী শুধুই কলেজ জীবনে আটকে থাকেনি, বরং সময়ের সাথে সাথে আরও গভীর হতে থাকে...<br>তারা একসাথে ভবিষ্যতের স্বপ্ন বুনতে থাকে।<br>তবে ভালোবাসার পথ কি সবসময় мосрён হয়?<br>চলতে চলতে আসে কিছু দূরত্ব... ভুল বোঝাবুঝি...<br>কিন্তু সেসব পেরিয়ে আবার ফিরে আসা...<br>এটাই ছিল তাদের ভালোবাসার আসল গল্প।</div>
-    <div class="btn-readmore">আরও পড়ুন</div>
+    <div class="btn-readmore" onclick="toggleStory(this)">আরো পড়ুন</div> 
+    
     <div class="ad-container">
       <a href="https://your-affiliate-link.com" target="_blank">
         <img src="https://via.placeholder.com/700x100?text=Romantic+Gift+Banner" class="ad-banner" alt="Romantic Gift Ad">
@@ -240,7 +243,8 @@
     <div class="story-title">ভালবাসার শুরু</div>
     <div class="story-summary">কলেজের প্রথম দিনেই দেখা, তখন থেকে উঠে আসা প্রত্যাশার গল্প।</div>
     <div class="story-content">রাহুল আর মেহজাবিনের দেখা হয়েছিল লাইব্রেরির কোণে, যখন বইয়ের মধ্যে লুকানো এক অজানা হাসি তাদের কাছে পাখির মতো ভেসে এলো...<br>তাদের বন্ধুত্ব খুব দ্রুত জমে উঠলো, ক্লাসের পর একসাথে ক্যান্টিনে যাওয়া, লাইব্রেরিতে পাশাপাশি বসে পড়া যেন এক স্বপ্নের মতো ছিল।<br>একদিন হঠাৎ করে বৃষ্টিতে ভিজে যাওয়ার পর রাহুল প্রথমবার হাত ধরেছিল...<br>সেই মুহূর্তে দুজনের চোখে যা ছিল, তা হাজার শব্দেও বলা যায় না...<br>তাদের কাহিনী শুধুই কলেজ জীবনে আটকে থাকেনি, বরং সময়ের সাথে সাথে আরও গভীর হতে থাকে...<br>তারা একসাথে ভবিষ্যতের স্বপ্ন বুনতে থাকে।<br>তবে ভালোবাসার পথ কি সবসময় মসৃণ হয়?<br>চলতে চলতে আসে কিছু দূরত্ব... ভুল বোঝাবুঝি...<br>কিন্তু সেসব পেরিয়ে আবার ফিরে আসা...<br>এটাই ছিল তাদের ভালোবাসার আসল গল্প।</div>
-    <div class="btn-readmore">আরও পড়ুন</div>
+    <div class="btn-readmore" onclick="toggleStory(this)">আরো পড়ুন</div> 
+    
     <div class="ad-container">
       <a href="https://your-affiliate-link.com" target="_blank">
         <img src="https://via.placeholder.com/700x100?text=Romantic+Gift+Banner" class="ad-banner" alt="Romantic Gift Ad">
@@ -265,7 +269,8 @@
     <div class="story-title">ভালবাসার শুরু</div>
     <div class="story-summary">কলেজের প্রথম দিনেই দেখা, তখন থেকে উঠে আসা প্রত্যাশার গল্প।</div>
     <div class="story-content">রাহুল আর মেহজাবিনের দেখা হয়েছিল লাইব্রেরির কোণে, যখন বইয়ের মধ্যে লুকানো এক অজানা হাসি তাদের কাছে পাখির মতো ভেসে এলো...<br>তাদের বন্ধুত্ব খুব দ্রুত জমে উঠলো, ক্লাসের পর একসাথে ক্যান্টিনে যাওয়া, লাইব্রেরিতে পাশাপাশি বসে পড়া যেন এক স্বপ্নের মতো ছিল।<br>একদিন হঠাৎ করে বৃষ্টিতে ভিজে যাওয়ার পর রাহুল প্রথমবার হাত ধরেছিল...<br>সেই মুহূর্তে দুজনের চোখে যা ছিল, তা হাজার শব্দেও বলা যায় না...<br>তাদের কাহিনী শুধুই কলেজ জীবনে আটকে থাকেনি, বরং সময়ের সাথে সাথে আরও গভীর হতে থাকে...<br>তারা একসাথে ভবিষ্যতের স্বপ্ন বুনতে থাকে।<br>তবে ভালোবাসার পথ কি সবসময় мосрён হয়?<br>চলতে চলতে আসে কিছু দূরত্ব... ভুল বোঝাবুঝি...<br>কিন্তু সেসব পেরিয়ে আবার ফিরে আসা...<br>এটাই ছিল তাদের ভালোবাসার আসল গল্প।</div>
-    <div class="btn-readmore">আরও পড়ুন</div>
+    <div class="btn-readmore" onclick="toggleStory(this)">আরো পড়ুন</div> 
+    
     <div class="ad-container">
       <a href="https://your-affiliate-link.com" target="_blank">
         <img src="https://via.placeholder.com/700x100?text=Romantic+Gift+Banner" class="ad-banner" alt="Romantic Gift Ad">
@@ -290,27 +295,22 @@
     <a href="romantic2.html" class="more-button">আরো গল্প পড়ুন</a>
   </div>
 
-  <!-- JavaScript -->
-  <script>function toggleStory(button) {
-  const box = button.closest('.story-box');
-  const content = box.querySelector('.story-content');
+  <script>
+  function toggleStory(button) {
+    const box = button.closest('.story-box');
+    const content = box.querySelector('.story-content');
 
-  if (box.classList.contains('expanded')) {
-    content.style.maxHeight = '17em'; // আগের অবস্থায় ফিরিয়ে দাও (১০ লাইন)
-    box.classList.remove('expanded');
-    button.textContent = "আরো পড়ুন";
-
-    // নিচে স্ক্রল হওয়ার সমস্যা এড়াতে নিচের কোড দিয়ে স্ক্রল সেট করো
-    // এইটা ওই গল্প বক্সের শুরুতে স্ক্রল করবে, smooth effect সহ
-    box.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-  } else {
-    content.style.maxHeight = content.scrollHeight + "px"; // পুরোটাই দেখাও
-    box.classList.add('expanded');
-    button.textContent = "কম দেখাও";
+    if (box.classList.contains('expanded')) {
+      content.style.maxHeight = '17em';
+      box.classList.remove('expanded');
+      button.textContent = "আরো পড়ুন";
+      box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      box.classList.add('expanded');
+      button.textContent = "কম দেখাও";
+    }
   }
-}
-</script>
-
+  </script>
 </body>
 </html>
