@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ViralX Hub | Premium Adult Content</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --main-bg: #0a0a0a;
+      --card-bg: #1a1a1a;
+      --accent-red: #ff2a2a;
+      --accent-pink: #ff2a6d;
+      --text-primary: #ffffff;
+      --text-secondary: #b8b8b8;
+      --gradient: linear-gradient(45deg, var(--accent-red), var(--accent-pink));
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--main-bg);
+      color: var(--text-primary);
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    /* Neon Glow Effect */
+    .neon-text {
+      text-shadow:
+        0 0 5px var(--accent-pink),
+        0 0 10px var(--accent-pink),
+        0 0 20px var(--accent-pink);
+    }
+
+    /* Header Section */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      position: relative;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 5px var(--accent-red));
+    }
+
+    .site-name {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 1px;
+    }
+
+    /* Navigation */
+    .nav-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-btn {
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+
+    .special-btn {
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+      box-shadow: 0 4px 15px rgba(255, 42, 42, 0.3);
+    }
+
+    /* Top Warning Box (centered) */
+    .warning-box {
+      text-align: center;
+      padding: 7px 20px; /* উপরে-নিচ ছোট করা হয়েছে */
+      max-width: 600px;  /* বক্সের সর্বোচ্চ প্রস্থ সীমিত */
+      margin: 20px auto; /* সেন্টারে রাখার জন্য */
+      border-radius: 10px;
+      background: #fff0f5; /* হালকা ব্যাকগ্রাউন্ড */
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .telegram-btn-box {
+      display: inline-block;
+      background: #0088cc;
+      color: #fff;
+      padding: 10px 25px; /* বাটনের উচ্চতা কমানো হয়েছে */
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-bottom: 10px; /* বাটনের নিচের মার্জিন কমানো হয়েছে */
+    }
+
+    .telegram-btn-box:hover {
+      background: #006699;
+      transform: translateY(-2px); /* হালকা hover effect */
+    }
+
+    .telegram-description {
+      color: var(--text-secondary);
+      font-size: 0.9rem; /* ছোট লেখা */
+      margin-top: 5px;   /* উপরে-নিচের ফাঁকা কমানো */
+      line-height: 1.4;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 20px rgba(255, 42, 42, 0.4);
+    }
+
+    .badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: var(--accent-red);
+      color: #fff;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      position: relative;
+      height: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 20px 0;
+      background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1590845947676-fa2576f401d2?q=80&w=1000') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .hero-subtitle {
+      color: var(--text-secondary);
+      max-width: 600px;
+      font-size: 0.9rem;
+    }
+
+    /* Category Tabs */
+    .category-tabs {
+      display: flex;
+      gap: 10px;
+      margin: 25px 0;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .category-tabs::-webkit-scrollbar {
+      height: 5px;
+    }
+
+    .category-tabs::-webkit-scrollbar-thumb {
+      background: var(--accent-red);
+      border-radius: 10px;
+    }
+
+    .tab-btn {
+      padding: 10px 25px;
+      background: var(--card-bg);
+      color: var(--text-primary);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 600;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .tab-btn.active {
+      background: var(--gradient);
+    }
+
+    .tab-btn:hover {
+      background: var(--accent-red);
+    }
+
+    /* Ad Banner */
+    .ad-banner {
+      width: 100%;
+      height: 100px;
+      background: var(--card-bg);
+      margin: 25px 0;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      border: 1px dashed #333;
+      font-size: 0.9rem;
+    }
+
+    .video-section {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      padding: 20px;
+    }
+
+    .video-box {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .video-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .video-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-title {
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+      color: var(--text-primary);
+    }
+
+    .video-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+    }
+
+    .download-btn {
+      display: block;
+      text-align: center;
+      background: var(--gradient);
+      color: #fff;
+      padding: 10px 0;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 42, 42, 0.3);
+    }
+
+    /* Mobile Responsive (section-specific) */
+    @media (max-width: 768px) {
+      .video-section { padding: 15px; }
+      .video-title   { font-size: 1.1rem; }
+      .download-btn  { font-size: 0.9rem; }
+    }
+
+    /* Warning Box (variant with left border) */
+    .warning-box {
+      background: var(--card-bg);
+      border-left: 4px solid var(--accent-red);
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .warning-title {
+      color: var(--accent-red);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .warning-text {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 50px;
+      padding: 30px 0;
+      border-top: 1px solid #333;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+    }
+
+    .footer-text {
+      color: var(--text-secondary);
+      max-width: 700px;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      transition: all 0.3s;
+    }
+
+    .social-link:hover {
+      background: var(--accent-red);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+    }
+
+    /* Age Verification Modal */
+    .age-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .age-modal.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-content {
+      background: var(--card-bg);
+      border-radius: 10px;
+      max-width: 500px;
+      width: 90%;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      border: 1px solid var(--accent-red);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .modal-icon {
+      font-size: 3rem;
+      color: var(--accent-red);
+      margin-bottom: 15px;
+    }
+
+    .modal-title {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .modal-text {
+      color: var(--text-secondary);
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .modal-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .modal-btn {
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-yes {
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+    }
+
+    .btn-no {
+      background: none;
+      color: var(--text-primary);
+      border: 1px solid var(--text-secondary);
+    }
+
+    .btn-yes:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 42, 42, 0.3);
+    }
+
+    .btn-no:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Sidebar Menu */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 300px;
+      height: 100%;
+      background: var(--card-bg);
+      z-index: 1001;
+      transition: all 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .sidebar.active { left: 0; }
+
+    .sidebar-header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+
+    .sidebar-logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .sidebar-close {
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .sidebar-menu { padding: 20px; }
+
+    .menu-title {
+      color: var(--accent-red);
+      font-size: 1rem;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .menu-list { list-style: none; }
+
+    .menu-item { margin-bottom: 10px; }
+
+    .menu-link {
+      display: block;
+      padding: 10px;
+      color: var(--text-primary);
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .menu-link:hover {
+      background: rgba(255, 42, 42, 0.1);
+      color: var(--accent-red);
+    }
+
+    .menu-icon { font-size: 1.1rem; }
+
+    /* Responsive (global) */
+    @media (max-width: 768px) {
+      .nav-buttons { display: none; }
+      .menu-toggle { display: block; }
+      .video-grid  { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+      .hero-title  { font-size: 1.5rem; }
+    }
+
+    /* Responsive */
+    @media (max-width:768px){
+      .video-section{ padding:15px 0; }
+      .video-title{ font-size:1.1rem; }
+      .download-btn{ font-size:.9rem; }
+    }
+    @media (max-width:480px){
+      .tab-btn{ padding:8px 15px; font-size:.8rem; }
+      .header{ flex-wrap:wrap; }
+    }
+  </style>
+</head>
+<body>
+ <!-- Age Verification Modal -->  
+    <div class="age-modal" id="ageModal">  
+        <div class="modal-content">  
+            <button class="modal-close" id="modalClose">&times;</button>  
+            <div class="modal-icon">  
+                <i class="fas fa-exclamation-triangle"></i>  
+            </div>  
+            <h2 class="modal-title">বয়স ভেরিফিকেশন</h2>  
+            <p class="modal-text">  
+                এই ওয়েবসাইটটি শুধুমাত্র ১৮+ বয়সের দর্শকদের জন্য। আপনি যদি ১৮ বছরের কম বয়সী হন, অনুগ্রহ করে এই সাইট অ্যাক্সেস করবেন না। এই সাইটে প্রাপ্তবয়স্ক কন্টেন্ট রয়েছে যা শুধুমাত্র বয়স্ক দর্শকদের জন্য উপযুক্ত।  
+            </p>  
+            <div class="modal-buttons">  
+                <button class="modal-btn btn-yes" id="confirmAge">হ্যাঁ, আমি ১৮+</button>  
+                <button class="modal-btn btn-no" id="denyAge">না, আমি প্রস্থান করছি</button>  
+            </div>  
+        </div>  
+    </div>  <!-- Sidebar Menu -->
+
+<div class="sidebar" id="sidebar">  
+    <div class="sidebar-header">  
+        <div class="sidebar-logo">ViralX Hub</div>  
+        <button class="sidebar-close" id="sidebarClose">&times;</button>  
+    </div>  <div class="sidebar-menu">  
+    <h3 class="menu-title">মেনু</h3>  
+    <ul class="menu-list">  
+        <li class="menu-item">  
+            <a href="index.html" class="menu-link">  
+                <i class="fas fa-home menu-icon"></i>  
+                হোম  
+            </a>  
+        </li>  
+        <li class="menu-item">  
+            <a href="page1.html" class="menu-link">  
+                <i class="fas fa-star menu-icon"></i>  
+                স্পেশাল ভিডিও  
+            </a>  
+        </li>  
+        <li class="menu-item">  
+            <a href="page2.html" class="menu-link">  
+                <i class="fas fa-fire menu-icon"></i>  
+                ভাইরাল ভিডিও  
+            </a>  
+        </li>  
+        <li class="menu-item">  
+            <a href="page3.html" class="menu-link">  
+                <i class="fas fa-fingerprint menu-icon"></i>  
+                ফিঙ্গারিং ভিডিও  
+            </a>  
+        </li>  
+        <li class="menu-item">  
+            <a href="page4.html" class="menu-link">  
+                <i class="fas fa-video menu-icon"></i>  
+                বাংলা ভিডিও  
+            </a>  
+        </li>  
+    </ul>  
+      
+    <h3 class="menu-title">বিস্তারিত</h3>  
+    <div class="warning-text" style="font-size: 0.8rem; margin-bottom: 15px;">  
+        এই ওয়েবসাইটে প্রকাশিত সকল ভিডিও ইন্টারনেট থেকে সংগ্রহ করা হয়েছে। কোন ভিডিও আমাদের সার্ভারে স্টোর করা নেই। যদি আপনার কোন ভিডিও অপসারণের প্রয়োজন হয়, অনুগ্রহ করে আমাদের সাথে যোগাযোগ করুন।  
+    </div>  
+</div>
+
+</div>  
+     <!-- Main Content -->  
+    <div class="container">  
+        <!-- Header -->  
+        <header class="header">  
+    <div class="logo-container">  
+        <img src="https://i.ibb.co/j4X7KQH/logo.png" alt="Logo" class="logo-img">  
+        <h1 class="site-name">Bangla Viral X</h1>  
+    </div>  <div class="nav-container">  
+    <button class="menu-toggle" id="menuToggle">  
+        <i class="fas fa-bars"></i>  
+    </button>  
+    <div class="nav-buttons">  
+        <button class="nav-btn special-btn">  
+            <i class="fas fa-crown"></i>  
+            <div class="badge">NEW</div>  
+        </button>  
+    </div>  
+</div>
+
+</header>  <!-- Category Tabs -->
+
+<div class="category-tabs">  
+    <button class="tab-btn active" onclick="window.location.href='page1.html'">সকল ভিডিও</button>  
+    <button class="tab-btn" onclick="window.location.href='page2.html'">বাংলা ভিডিও</button>  
+    <button class="tab-btn" onclick="window.location.href='page3.html'">ভাইরাল ভিডিও</button>  
+    <button class="tab-btn" onclick="window.location.href='page4.html'">ফিঙ্গারিং</button>  
+</div>  
+        <!-- Telegram Button Box with Description -->  
+<div class="warning-box" style="text-align: center; padding: 30px;">  
+    <a href="https://t.me/YourTelegramUsername" target="_blank" class="telegram-btn-box">  
+        <i class="fab fa-telegram"></i> Join now  
+    </a>  
+    <p class="telegram-description">  
+        বাংলাদেশের সেরা প্রাপ্তবয়স্ক ভিডিও প্লাটফর্ম। প্রতিদিন নতুন নতুন ভাইরাল ভিডিও আপলোড করা হয়। আমাদের টেলিগ্রাম চ্যানেলে যোগ দিন নিয়মিত আপডেট পেতে।  
+    </p>  
+</div>  
+        <!-- Ad Banner -->  
+<div class="ad-banner">  
+    <script type="text/javascript">  
+        atOptions = {  
+            'key' : '45f4e1c1c9b279494fa42f69080a102f',  
+            'format' : 'iframe',  
+            'height' : 90,  
+            'width' : 728,  
+            'params' : {}  
+        };  
+    </script>  
+    <script type="text/javascript" src="//www.highperformanceformat.com/45f4e1c1c9b279494fa42f69080a102f/invoke.js"></script>  
+</div>  <!-- Video Section -->
+
+<div class="video-section">  <!-- Video Box 1 -->  
+<div class="video-box">  
+    <div class="video-thumb">  
+        <img src="https://i.postimg.cc/XYRkc2js/f823bf27bc6ad618f67778f9525cb8ad-high.png" alt="Video 1">  
+    </div>  
+    <h3 class="video-title">ভিডিও ১ টাইটেল</h3>  
+    <div class="video-info">  
+        <span class="views">১,০০,০০০ ভিউস</span>  
+        <span class="rating">রেটিং: 6.8</span>  
+    </div>  
+    <a href="VIDEO_1_LINK" class="download-btn" target="_blank">ডাউনলোড</a>  
+</div>  
+
+<!-- Video Box 2 -->  
+<div class="video-box">  
+    <div class="video-thumb">  
+        <img src="VIDEO_IMAGE_2_LINK" alt="Video 2">  
+    </div>  
+    <h3 class="video-title">ভিডিও ২ টাইটেল</h3>  
+    <div class="video-info">  
+        <span class="views">৬,০০,০০০ ভিউস</span>  
+        <span class="rating">রেটিং: 7.2</span>  
+    </div>  
+    <a href="VIDEO_2_LINK" class="download-btn" target="_blank">ডাউনলোড</a>  
+</div>
+
+<!-- Ad Banner -->  <div class="ad-banner">  
+    <script type="text/javascript">  
+        atOptions = {  
+            'key' : '45f4e1c1c9b279494fa42f69080a102f',  
+            'format' : 'iframe',  
+            'height' : 90,  
+            'width' : 728,  
+            'params' : {}  
+        };  
+    </script>  
+    <script type="text/javascript" src="//www.highperformanceformat.com/45f4e1c1c9b279494fa42f69080a102f/invoke.js"></script>  
+</div>  <!-- Video Box 3 -->  
+<div class="video-box">  
+    <div class="video-thumb">  
+        <img src="VIDEO_IMAGE_3_LINK" alt="Video 3">  
+    </div>  
+    <h3 class="video-title">ভিডিও ৩ টাইটেল</h3>  
+    <div class="video-info">  
+        <span class="views">৩,৫০,০০০ ভিউস</span>  
+        <span class="rating">রেটিং: 6.5</span>  
+    </div>  
+    <a href="VIDEO_3_LINK" class="download-btn" target="_blank">ডাউনলোড</a>  
+</div>  
+
+<!-- Video Box 4 -->  
+<div class="video-box">  
+    <div class="video-thumb">  
+        <img src="VIDEO_IMAGE_4_LINK" alt="Video 4">  
+    </div>  
+    <h3 class="video-title">ভিডিও ৪ টাইটেল</h3>  
+    <div class="video-info">  
+        <span class="views">৮,০০,০০০ ভিউস</span>  
+        <span class="rating">রেটিং: 7.0</span>  
+    </div>  
+    <a href="VIDEO_4_LINK" class="download-btn" target="_blank">ডাউনলোড</a>  
+</div>  
+  
+<!-- Ad Banner -->
+
+<div class="ad-banner">  
+    <script type="text/javascript">  
+        atOptions = {  
+            'key' : '45f4e1c1c9b279494fa�f69080a102f',  
+            'format' : 'iframe',  
+            'height' : 90,  
+            'width' : 728,  
+            'params' : {}  
+        };  
+    </script>  
+    <script type="text/javascript" src="//www.highperformanceformat.com/45f4e1c1c9b279494fa42f69080a102f/invoke.js"></script>  
+</div>  <!-- Video Box 5 -->  
+<div class="video-box">  
+    <div class="video-thumb">  
+        <img src="VIDEO_IMAGE_5_LINK" alt="Video 5">  
+    </div>  
+    <h3 class="video-title">ভিডিও ৫ টাইটেল</h3>  
+    <div class="video-info">  
+        <span class="views">১,২০,০০০ ভিউস</span>  
+        <span class="rating">রেটিং: 6.9</span>  
+    </div>  
+    <a href="VIDEO_5_LINK" class="download-btn" target="_blank">ডাউনলোড</a>  
+</div>  
+
+<!-- Video Box 6 -->  
+<div class="video-box">  
+    <div class="video-thumb">  
+        <img src="VIDEO_IMAGE_6_LINK" alt="Video 6">  
+    </div>  
+    <h3 class="video-title">ভিডিও ৬ টাইটেল</h3>  
+    <div class="video-info">  
+        <span class="views">৯,০০,০০০ ভিউস</span>  
+        <span class="rating">রেটিং: 7.1</span>  
+    </div>  
+    <a href="VIDEO_6_LINK" class="download-btn" target="_blank">ডাউনলোড</a>  
+</div>
+
+</div>  <!-- Ad Banner -->  <div class="ad-banner">  
+    <script type="text/javascript">  
+        atOptions = {  
+            'key' : '45f4e1c1c9b279494fa42f69080a102f',  
+            'format' : 'iframe',  
+            'height' : 90,  
+            'width' : 728,  
+            'params' : {}  
+        };  
+    </script>  
+    <script type="text/javascript" src="//www.highperformanceformat.com/45f4e1c1c9b279494fa42f69080a102f/invoke.js"></script>  
+</div>  <!-- Warning Box -->  
+    <div class="warning-box">  
+        <h3 class="warning-title">  
+            <i class="fas fa-exclamation-circle"></i>  
+            গুরুত্বপূর্ণ সতর্কবার্তা  
+        </h3>  
+        <p class="warning-text">  
+            এই ওয়েবসাইটে থাকা সকল ভিডিও শুধুমাত্র শিক্ষামূলক ও গবেষণার উদ্দেশ্যে প্রদর্শন করা হচ্ছে। বাংলাদেশের আইন অনুযায়ী ১৮ বছরের কম বয়সীদের জন্য এই ধরনের কন্টেন্ট নিষিদ্ধ। যদি আপনি ১৮ বছরের কম বয়সী হন, অনুগ্রহ করে এই সাইট ব্যবহার করবেন না। এই সাইটে থাকা কন্টেন্টের জন্য সাইট কর্তৃপক্ষ কোনভাবেই দায়ী নয়।  
+        </p>  
+    </div>  
+      
+   <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">Bangla Viral X</div>
+                <p class="footer-text">
+                    বাংলাদেশের সেরা প্রাপ্তবয়স্ক ভিডিও প্লাটফর্ম। প্রতিদিন নতুন নতুন ভাইরাল ভিডিও আপলোড করা হয়। আমাদের টেলিগ্রাম চ্যানেলে যোগ দিন নিয়মিত আপডেট পেতে।
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p class="copyright">
+                    &copy; 2023 Bangla Viral X. All Rights Reserved. | এই ওয়েবসাইটের সকল কন্টেন্ট ইন্টারনেট থেকে সংগ্রহ করা হয়েছে।
+                </p>
+            </div>
+        </footer>
+    </div>
+
+<script>  
+// Age Verification Modal  
+window.addEventListener('DOMContentLoaded', () => {  
+    // চেক করব sessionStorage-এ আগেই কনফার্ম করা আছে কিনা  
+    if (!sessionStorage.getItem('ageVerified')) {  
+        setTimeout(() => {  
+            document.getElementById('ageModal').classList.add('active');  
+        }, 2000);  
+    }  
+});  
+
+document.getElementById('confirmAge').addEventListener('click', function() {  
+    document.getElementById('ageModal').classList.remove('active');  
+    sessionStorage.setItem('ageVerified', 'true'); // একবার কনফার্ম করলে সেভ  
+});  
+
+document.getElementById('denyAge').addEventListener('click', function() {  
+    window.location.href = 'https://www.google.com';  
+});  
+
+document.getElementById('modalClose').addEventListener('click', function() {  
+    document.getElementById('ageModal').classList.remove('active');  
+    sessionStorage.setItem('ageVerified', 'true');  
+});  
+
+const sidebar = document.getElementById('sidebar');  
+const menuToggle = document.getElementById('menuToggle');  
+const sidebarClose = document.getElementById('sidebarClose');  
+
+// Open sidebar  
+menuToggle.addEventListener('click', function(event) {  
+    sidebar.classList.add('active');  
+    event.stopPropagation();  
+});  
+
+// Close sidebar  
+sidebarClose.addEventListener('click', function() {  
+    sidebar.classList.remove('active');  
+});  
+
+// Close sidebar when clicking outside  
+document.addEventListener('click', function(event) {  
+    if (!sidebar.contains(event.target) && event.target !== menuToggle) {  
+        sidebar.classList.remove('active');  
+    }  
+});  
+
+// Category Tabs  
+const tabButtons = document.querySelectorAll('.tab-btn');  
+
+tabButtons.forEach(button => {  
+    button.addEventListener('click', function() {  
+        tabButtons.forEach(btn => btn.classList.remove('active'));  
+        this.classList.add('active');  
+    });  
+});  
+
+// Video Card Hover Effect  
+const videoCards = document.querySelectorAll('.video-card');  
+
+videoCards.forEach(card => {  
+    card.addEventListener('mouseenter', function() {  
+        this.style.transform = 'translateY(-5px)';  
+        this.style.boxShadow = '0 10px 25px rgba(255, 42, 42, 0.2)';  
+    });  
+
+    card.addEventListener('mouseleave', function() {  
+        this.style.transform = 'translateY(0)';  
+        this.style.boxShadow = 'none';  
+    });  
+});
+
+</script>  
+</body>  
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bangla Viral X | Premium Adult Content</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root{
+      --main-bg:#0a0a0a;
+      --card-bg:#1a1a1a;
+      --accent-red:#ff2a2a;
+      --accent-pink:#ff2a6d;
+      --text-primary:#ffffff;
+      --text-secondary:#b8b8b8;
+      --gradient:linear-gradient(45deg,var(--accent-red),var(--accent-pink));
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    }
+
+    body{
+      background-color:var(--main-bg);
+      color:var(--text-primary);
+      overflow-x:hidden;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 15px;
+    }
+
+    /* Neon glow */
+    .neon-text{
+      text-shadow:0 0 5px var(--accent-pink),0 0 10px var(--accent-pink),0 0 20px var(--accent-pink);
+    }
+
+    /* Header */
+    .header{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:15px 0;
+      position:relative;
+    }
+
+    .logo-container{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo-img{
+      width:40px;
+      height:40px;
+      object-fit:contain;
+      filter:drop-shadow(0 0 5px var(--accent-red));
+    }
+
+    .site-name{
+      font-size:1.8rem;
+      font-weight:800;
+      background:var(--gradient);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      letter-spacing:1px;
+    }
+
+    /* Hero (optional, not used below but kept for future) */
+    .hero-banner{
+      position:relative;
+      height:200px;
+      border-radius:10px;
+      overflow:hidden;
+      margin:20px 0;
+      background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+        url('https://images.unsplash.com/photo-1590845947676-fa2576f401d2?q=80&w=1000') center/cover no-repeat;
+      display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center; padding:20px;
+    }
+    .hero-title{
+      font-size:2rem;
+      margin-bottom:10px;
+      background:var(--gradient);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      font-weight:700;
+    }
+    .hero-subtitle{
+      color:var(--text-secondary);
+      max-width:600px;
+      font-size:.9rem;
+    }
+
+    /* Category tabs (unused now) */
+    .category-tabs{ display:flex; gap:10px; margin:25px 0; overflow-x:auto; padding-bottom:10px; }
+    .category-tabs::-webkit-scrollbar{ height:5px; }
+    .category-tabs::-webkit scrollbar-thumb{ background:var(--accent-red); border-radius:10px; }
+    .tab-btn{
+      padding:10px 25px;
+      background:var(--card-bg);
+      color:var(--text-primary);
+      border:none; border-radius:30px; cursor:pointer; transition:all .3s; font-weight:600; white-space:nowrap; flex-shrink:0;
+    }
+    .tab-btn.active{ background:var(--gradient); }
+    .tab-btn:hover{ background:var(--accent-red); }
+
+    /* Ad banner */
+    .ad-banner{
+      width:100%; height:100px;
+      background:var(--card-bg);
+      margin:25px 0;
+      border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      color:var(--text-secondary);
+      border:1px dashed #333;
+      font-size:.9rem;
+      overflow:hidden;
+    }
+
+    /* Telegram promo box (renamed to avoid conflict with legal warning box) */
+    .promo-box{
+      text-align:center;
+      padding:20px;
+      max-width:600px;
+      margin:20px auto 0 auto;
+      border-radius:10px;
+      background:var(--card-bg);
+      box-shadow:0 5px 15px rgba(0,0,0,.1);
+      border:1px solid #2a2a2a;
+    }
+    .telegram-btn-box{
+      display:inline-block;
+      background:#0088cc;
+      color:#fff;
+      padding:10px 25px;
+      font-size:.95rem;
+      font-weight:600;
+      border-radius:30px;
+      text-decoration:none;
+      transition:all .3s ease;
+      margin-bottom:10px;
+    }
+    .telegram-btn-box:hover{
+      background:#006699;
+      transform:translateY(-2px);
+    }
+    .telegram-description{
+      color:var(--text-secondary);
+      font-size:.9rem;
+      margin-top:5px;
+      line-height:1.4;
+    }
+
+    /* Video section */
+    .video-section{
+      display:flex;
+      flex-direction:column;
+      gap:25px;
+      padding:20px 0;
+    }
+    .video-box{
+      background:var(--card-bg);
+      border-radius:10px;
+      padding:15px;
+      box-shadow:0 4px 10px rgba(0,0,0,.1);
+    }
+    .video-thumb{
+      width:100%;
+      aspect-ratio:16/9;
+      overflow:hidden;
+      border-radius:8px;
+      background:#111;
+    }
+    .video-thumb img{
+      width:100%; height:100%; object-fit:cover; display:block;
+    }
+    .video-title{
+      font-size:1.2rem;
+      margin:10px 0 5px;
+      color:var(--text-primary);
+    }
+    .video-info{
+      display:flex;
+      justify-content:space-between;
+      font-size:.9rem;
+      color:var(--text-secondary);
+      margin-bottom:10px;
+    }
+    .download-btn{
+      display:block;
+      text-align:center;
+      background:var(--gradient);
+      color:#fff;
+      padding:10px 0;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      transition:all .3s ease;
+    }
+    .download-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 5px 15px rgba(255,42,42,.3);
+    }
+
+    /* Legal warning box */
+    .warning-box{
+      background:var(--card-bg);
+      border-left:4px solid var(--accent-red);
+      padding:20px;
+      margin:30px 0;
+      border-radius:0 8px 8px 0;
+    }
+    .warning-title{
+      color:var(--accent-red);
+      font-size:1.2rem;
+      margin-bottom:10px;
+      display:flex; align-items:center; gap:10px;
+    }
+    .warning-text{
+      color:var(--text-secondary);
+      font-size:.9rem;
+      line-height:1.6;
+    }
+
+    /* Footer */
+    .footer{ margin-top:50px; padding:30px 0; border-top:1px solid #333; }
+    .footer-content{ display:flex; flex-direction:column; align-items:center; text-align:center; }
+    .footer-logo{
+      font-size:1.5rem; font-weight:800;
+      background:var(--gradient);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      margin-bottom:15px;
+    }
+    .footer-text{
+      color:var(--text-secondary);
+      max-width:700px;
+      font-size:.9rem;
+      line-height:1.6;
+      margin-bottom:20px;
+    }
+    .social-links{ display:flex; gap:15px; margin-bottom:20px; }
+    .social-link{
+      width:40px; height:40px; border-radius:50%;
+      background:var(--card-bg);
+      display:flex; align-items:center; justify-content:center;
+      color:var(--text-primary);
+      transition:all .3s;
+      border:1px solid #2a2a2a;
+    }
+    .social-link:hover{ background:var(--accent-red); transform:translateY(-3px); }
+    .copyright{ color:var(--text-secondary); font-size:.8rem; }
+
+    /* Responsive */
+    @media (max-width:768px){
+      .video-section{ padding:15px 0; }
+      .video-title{ font-size:1.1rem; }
+      .download-btn{ font-size:.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header - Now simplified with only logo and site name -->
+    <header class="header">
+      <div class="logo-container">
+        <img src="https://i.ibb.co/j4X7KQH/logo.png" alt="Logo" class="logo-img">
+        <h1 class="site-name">Bangla Viral X</h1>
+      </div>
+    </header>
+
+    <!-- Telegram Promo -->
+    <div class="promo-box">
+      <a href="https://t.me/YourTelegramUsername" target="_blank" rel="noopener" class="telegram-btn-box">
+        <i class="fab fa-telegram"></i> Join now
+      </a>
+      <p class="telegram-description">
+        বাংলাদেশের সেরা প্রাপ্তবয়স্ক ভিডিও প্লাটফর্ম। প্রতিদিন নতুন নতুন ভাইরাল ভিডিও আপলোড করা হয়।
+        আমাদের টেলিগ্রাম চ্যানেলে যোগ দিন নিয়মিত আপডেট পেতে।
+      </p>
+    </div>
+
+    <!-- Ad Banner -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key':'45f4e1c1c9b279494fa42f69080a102f',
+          'format':'iframe',
+          'height':90,
+          'width':728,
+          'params':{}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/45f4e1c1c9b279494fa42f69080a102f/invoke.js"></script>
+    </div>
+
+    <!-- Video Section -->
+    <section class="video-section">
+
+      <div class="video-box">
+        <div class="video-thumb">
+          <img src="https://i.postimg.cc/XYRkc2js/f823bf27bc6ad618f67778f9525cb8ad-high.png" alt="ভিডিও ১ থাম্বনেল">
+        </div>
+        <h3 class="video-title">ভিডিও ১ টাইটেল</h3>
+        <div class="video-info">
+          <span class="views">১,০০,০০০ ভিউস</span>
+          <span class="rating">রেটিং: 6.8</span>
+        </div>
+        <a href="https://gofile.io/d/YourVideoLink1" class="download-btn" target="_blank" rel="noopener">ডাউনলোড</a>
+      </div>
+
+      <!-- Video Box 2 -->
+      <div class="video-box">
+        <div class="video-thumb">
+          <img src="https://i.postimg.cc/XYRkc2js/f823bf27bc6ad618f67778f9525cb8ad-high.png" alt="ভিডিও ১ থাম্বনেল">
+        </div>
+        <h3 class="video-title">ভিডিও ১ টাইটেল</h3>
+        <div class="video-info">
+          <span class="views">১,০০,০০০ ভিউস</span>
+          <span class="rating">রেটিং: 6.8</span>
+        </div>
+        <a href="https://gofile.io/d/YourVideoLink1" class="download-btn" target="_blank" rel="noopener">ডাউনলোড</a>
+      </div>
+
+    </section>
+
+    <!-- Ad Banner -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key':'45f4e1c1c9b279494fa42f69080a102f',
+          'format':'iframe',
+          'height':90,
+          'width':728,
+          'params':{}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/45f4e1c1c9b279494fa42f69080a102f/invoke.js"></script>
+    </div>
+
+    <!-- More Videos -->
+    <section class="video-section">
+
+      <div class="video-box">
+        <div class="video-thumb">
+          <img src="https://i.postimg.cc/XYRkc2js/f823bf27bc6ad618f67778f9525cb8ad-high.png" alt="ভিডিও ১ থাম্বনেল">
+        </div>
+        <h3 class="video-title">ভিডিও ১ টাইটেল</h3>
+        <div class="video-info">
+          <span class="views">১,০০,০০০ ভিউস</span>
+          <span class="rating">রেটিং: 6.8</span>
+        </div>
+        <a href="https://gofile.io/d/YourVideoLink1" class="download-btn" target="_blank" rel="noopener">ডাউনলোড</a>
+      </div>
+
+      <!-- Video Box 4 -->
+      <div class="video-box">
+        <div class="video-thumb">
+          <img src="https://i.postimg.cc/XYRkc2js/f823bf27bc6ad618f67778f9525cb8ad-high.png" alt="ভিডিও ১ থাম্বনেল">
+        </div>
+        <h3 class="video-title">ভিডিও ১ টাইটেল</h3>
+        <div class="video-info">
+          <span class="views">১,০০,০০০ ভিউস</span>
+          <span class="rating">রেটিং: 6.8</span>
+        </div>
+        <a href="https://gofile.io/d/YourVideoLink1" class="download-btn" target="_blank" rel="noopener">ডাউনলোড</a>
+      </div>
+
+    </section>
+
+    <!-- Ad Banner -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key':'45f4e1c1c9b279494fa42f69080a102f',
+          'format':'iframe',
+          'height':90,
+          'width':728,
+          'params':{}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/45f4e1c1c9b279494fa42f69080a102f/invoke.js"></script>
+    </div>
+
+    <!-- More Videos -->
+    <section class="video-section">
+
+      <!-- Video Box 5 -->
+      <div class="video-box">
+        <div class="video-thumb">
+          <img src="https://i.postimg.cc/XYRkc2js/f823bf27bc6ad618f67778f9525cb8ad-high.png" alt="ভিডিও ১ থাম্বনেল">
+        </div>
+        <h3 class="video-title">ভিডিও ১ টাইটেল</h3>
+        <div class="video-info">
+          <span class="views">১,০০,০০০ ভিউস</span>
+          <span class="rating">রেটিং: 6.8</span>
+        </div>
+        <a href="https://gofile.io/d/YourVideoLink1" class="download-btn" target="_blank" rel="noopener">ডাউনলোড</a>
+      </div>
+
+      <!-- Video Box 6 -->
+      <div class="video-box">
+        <div class="video-thumb">
+          <img src="https://i.postimg.cc/XYRkc2js/f823bf27bc6ad618f67778f9525cb8ad-high.png" alt="ভিডিও ১ থাম্বনেল">
+        </div>
+        <h3 class="video-title">ভিডিও ১ টাইটেল</h3>
+        <div class="video-info">
+          <span class="views">১,০০,০০০ ভিউস</span>
+          <span class="rating">রেটিং: 6.8</span>
+        </div>
+        <a href="https://gofile.io/d/YourVideoLink1" class="download-btn" target="_blank" rel="noopener">ডাউনলোড</a>
+      </div>
+
+    </section>
+
+    <!-- Legal Warning -->
+    <div class="warning-box">
+      <h3 class="warning-title">
+        <i class="fas fa-exclamation-circle"></i>
+        গুরুত্বপূর্ণ সতর্কবার্তা
+      </h3>
+      <p class="warning-text">
+        এই ওয়েবসাইটে থাকা সকল ভিডিও শুধুমাত্র শিক্ষামূলক ও গবেষণার উদ্দেশ্যে প্রদর্শন করা হচ্ছে। বাংলাদেশের আইন অনুযায়ী ১৮ বছরের কম বয়সীদের জন্য এই ধরনের কন্টেন্ট নিষিদ্ধ।
+        যদি আপনি ১৮ বছরের কম বয়সী হন, অনুগ্রহ করে এই সাইট ব্যবহার করবেন না। এই সাইটে থাকা কন্টেন্টের জন্য সাইট কর্তৃপক্ষ কোনভাবেই দায়ী নয়।
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">Bangla Viral X</div>
+        <p class="footer-text">
+          বাংলাদেশের সেরা প্রাপ্তবয়স্ক ভিডিও প্লাটফর্ম। প্রতিদিন নতুন নতুন ভাইরাল ভিডিও আপলোড করা হয়। আমাদের টেলিগ্রাম চ্যানেলে যোগ দিন নিয়মিত আপডেট পেতে।
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Telegram">
+            <i class="fab fa-telegram"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter / X">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <p class="copyright">
+          &copy; 2023 Bangla Viral X. All Rights Reserved. | এই ওয়েবসাইটের সকল কন্টেন্ট ইন্টারনেট থেকে সংগ্রহ করা হয়েছে।
+        </p>
+      </div>
+    </footer>
+
+  </div> <!-- /.container -->
+</body>
+</html>
